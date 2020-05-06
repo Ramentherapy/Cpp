@@ -30,19 +30,19 @@ int main()
 {
 	int a = 2, b = 5;
 
-#if case == 0
+#if(case == 0)
 	cout << "a = " << a << " b = " << b << endl;
 	my_swap1(a, b);
 	cout << "a = " << a << " b = " << b << endl;
 #endif
 
-#if case == 1	
+#if(case == 1)	
 	cout << "a = " << a << " b = " << b << endl;
 	my_swap2(&a, &b);
 	cout << "a = " << a << " b = " << b << endl;
 #endif
 
-#if case == 2
+#if(case == 2)
 	cout << "a = " << a << " b = " << b << endl;
 	my_swap3(a, b);
 	cout << "a = " << a << " b = " << b << endl;

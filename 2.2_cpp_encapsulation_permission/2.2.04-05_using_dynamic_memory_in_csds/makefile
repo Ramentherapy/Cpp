@@ -1,2 +1,2 @@
 All:
-	g++ main.cpp person.cpp -o app
+	g++ main.cpp person.cpp -g -o app

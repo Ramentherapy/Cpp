@@ -40,7 +40,6 @@ hospital :: person :: person(string name)
 	this->person_gender = gender[1];
 }
 
-
 /*
 hospital :: person :: person(string name): person_name(name), person_age(32), person_gender(gender[1])
 {
@@ -60,7 +59,8 @@ hospital :: person :: person(string name): person_name(name), person_age(32), pe
 hospital :: person :: person(string name0, int age0, string gender0):person_name("kuku"), person_age(54)
 {
 	person_gender = "makaka";
-	this->p = new int[15];
+	this->p = new int(35);
+	// this->p = new int[15];
 }
 // hospital :: person :: person(string name3, int age3, string gender3):person_name(name3), person_age(age3)
 // {    
@@ -68,9 +68,17 @@ hospital :: person :: person(string name0, int age0, string gender0):person_name
 	// this->p = new int[15];
 // }
 
+hospital :: person :: person(const person& pn):person_name(pn.person_name), person_age(pn.person_age)
+{
+	this->person_gender = pn.person_gender;
+	cout << "this is copy constructor" << endl;
+	this->p = new int(*(pn.p));
+
+}
+
 hospital :: person :: ~person()
 {
-	// delete (this->p);
-	delete[] (this->p);
+	delete (this->p);
+	// delete[] (this->p);
 	cout << "destructor is working here" << endl;
 }

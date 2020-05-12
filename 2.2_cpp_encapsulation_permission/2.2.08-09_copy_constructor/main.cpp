@@ -1,6 +1,6 @@
 #include "person.hpp"
 #include <iostream>
-#define case 3
+#define case 4
 using namespace hospital;
 
 int main()
@@ -74,6 +74,25 @@ int main()
 	p1.shopping();
 	cout << "----------" << endl;
 	p1.print();
+#endif
+
+#if(case == 4)
+	person p1("Jack", 56);
+	person p2 = p1;
+	*(p1.p) = 555;
+	person p3(p1);
+	
+	p1.print();
+	cout << "*(p1.p) = " << *(p1.p) << endl;
+	cout << "p1----------" << endl;
+	
+	p2.print();
+	cout << "*(p2.p) = " << *(p2.p) << endl;
+	cout << "p2----------" << endl;
+	
+	p3.print();
+	cout << "*(p3.p) = " << *(p3.p) << endl;
+	cout << "p3----------" << endl;
 #endif
 	return 0;
 }

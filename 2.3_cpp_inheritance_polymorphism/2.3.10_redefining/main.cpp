@@ -2,7 +2,7 @@
 #include "man.hpp"
 #include <iostream>
 
-#define case 1
+#define case 2
 
 using namespace std;
 
@@ -37,6 +37,12 @@ int main()
 // ~man()
 // ~person()
 #endif	
+
+#if(case == 2)
+	man *p1 = new man;
+	p1->test();
+	delete(p1);
+#endif
 
 	return 0; 
 }

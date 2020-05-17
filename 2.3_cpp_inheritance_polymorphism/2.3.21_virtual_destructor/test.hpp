@@ -5,12 +5,14 @@ class Animal
 {
 public:
 	virtual void speak(void) = 0;
+	virtual ~Animal();
 };
 
 class Dog: public Animal
 {
 public:
 	void speak(void);
+	~Dog();
 };
 
 class Cat: public Animal
